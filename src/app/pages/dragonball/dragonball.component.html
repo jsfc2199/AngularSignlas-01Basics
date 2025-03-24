@@ -12,9 +12,10 @@
   <div class="col-12 col-sm-6">
     <h3>Listado</h3>
     <ol>
-      <li>Goku</li>
-      <li>Goku</li>
-      <li>Goku</li>
+      <!-- uso de for renovado de angular -->
+      @for (character of characters(); track character.id) {
+        <li>Nombre: {{character.name}} - Poder: {{character.power}}</li>
+      }
     </ol>
   </div>
 </section>
