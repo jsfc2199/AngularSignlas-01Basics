@@ -20,5 +20,8 @@ export class DragonballSuperComponent {
     { id: 2, name: 'vegeta', power: 100 },
   ]);
 
+  addCharacter(character: Character){
+    this.characters.update(list => [...list, character])
+  }
 
 }

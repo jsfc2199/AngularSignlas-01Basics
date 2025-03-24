@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, output, signal } from '@angular/core';
 import { Character } from '../../../pages/dragonball/dragonball.component';
 
 @Component({
@@ -10,6 +10,8 @@ export class AddCharacterComponent {
   name = signal('');
   power = signal(0);
 
+  //version mejorada de @output
+  newCharacter = output<Character>()
   addCharater() {
     if (!this.power() || !this.name()) {
       return;
@@ -17,15 +19,12 @@ export class AddCharacterComponent {
 
     const newCharacter: Character = {
       // id: this.characters().length + 1,
-      id: 5000,
+      id: Math.floor(Math.random()*1000),
       name: this.name(),
       power: this.power(),
     };
 
-    //actualizamos la señal
-    // this.characters.update((list) => [...list, newCharacter]);
-    console.log({newCharacter})
-
+    this.newCharacter.emit(newCharacter)
     this.resetFields();
   }
 

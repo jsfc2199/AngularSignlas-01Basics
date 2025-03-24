@@ -2,7 +2,7 @@
 <hr />
 <section class="row">
   <div class="col-12 col-sm-6">
-    <app-add-character></app-add-character>
+    <app-add-character (newCharacter)="addCharacter($event)"></app-add-character>
   </div>
 
   <div class="col-12 col-sm-6">
