@@ -14,7 +14,7 @@
     <ol>
       <!-- uso de for renovado de angular -->
       @for (character of characters(); track character.id) {
-        <li>Nombre: {{character.name}} - Poder: {{character.power}}</li>
+        <li>Nombre: {{character.name}} - Poder: <strong [class.text-danger]="character.power > 100">{{character.power}}</strong> </li>
       }
     </ol>
   </div>
