@@ -11,9 +11,19 @@
     color: white;
     text-decoration: none;
   }
+
+  nav a.active {
+    color: red;
+  }
 </style>
 <nav>
   <!-- uso de routerLink -->
-  <a routerLink="/">Contador</a>
-  <a routerLink="hero">Hero</a>
+  <!-- usamos exact para que sea si o si / y no se ponga todo con rojo al ser /hero porque /esta en ambas rutas -->
+  <a
+    routerLink="/"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    >Contador</a
+  >
+  <a routerLink="hero" routerLinkActive="active">Hero</a>
 </nav>
