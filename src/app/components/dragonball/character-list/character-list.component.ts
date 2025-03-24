@@ -9,5 +9,7 @@ import { Character } from '../../../pages/dragonball/dragonball.component';
 export class CharacterListComponent {
   // es lo mismo que @input
 characters = input.required<Character[]>();
+listName = input.required<string>();
+
 
 }
