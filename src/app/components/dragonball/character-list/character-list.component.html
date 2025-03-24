@@ -1,0 +1,16 @@
+<h3>Listado</h3>
+<ol>
+  <!-- uso de for renovado de angular -->
+  @for (character of characters(); track character.id) { @if (character.power
+  >99) {
+  <li>
+    Nombre: {{ character.name }} - Poder:
+    <strong [class.text-danger]="character.power > 100">{{
+      character.power
+    }}</strong>
+  </li>
+
+  }@else {
+  <li>Aqui no vale la pena ver nada</li>
+  } }
+</ol>
