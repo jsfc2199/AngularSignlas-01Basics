@@ -15,5 +15,7 @@ export class DragonballComponent {
     { id: 1, name: 'goku', power: 200 },
     { id: 2, name: 'vegeta', power: 100 },
     { id: 3, name: 'trunks', power: 100 },
+    { id: 4, name: 'piccolo', power: 20 },
+
   ]);
 }
