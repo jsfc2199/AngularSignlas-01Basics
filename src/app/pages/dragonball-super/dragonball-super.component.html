@@ -2,12 +2,12 @@
 <hr />
 <section class="row">
   <div class="col-12 col-sm-6">
-    <app-add-character (newCharacter)="addCharacter($event)"></app-add-character>
+    <app-add-character (newCharacter)="this.dragonBallService.addCharacter($event)"></app-add-character>
   </div>
 
   <div class="col-12 col-sm-6">
     <app-character-list
-      [characters]="characters()"
+      [characters]="this.dragonBallService.characters()"
       listName="Listado Poderosos"
     ></app-character-list>
   </div>
